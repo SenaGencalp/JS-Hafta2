@@ -1,0 +1,135 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e9ecef;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 60%;
+  margin: auto;
+  background: #6f8ca8; /* Arka plan rengi değiştirildi */
+  padding: 100px; /* Yüksekliği artırıldı */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex; /* Input ve butonu yan yana hizala */
+  align-items: center; /* Yüksekliklerini aynı hizada tut */
+}
+
+input {
+  width: calc(70% - 20px); /* Input alanı */
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #0056b3;
+  outline: none; /* Odaklanınca mavi çerçeve kaldırıldı */
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* Buton ile input arasında boşluk */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.messages {
+  display: flex; /* Mesaj kutularını yan yana hizala */
+  flex-direction: column; /* Dikey hizalama */
+  margin-left: 10px; /* Buton ile mesaj kutusu arasında boşluk */
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 0; /* Hata mesajı için boşluk kaldırıldı */
+  background: #f8d7da; /* Arka plan rengi */
+  padding: 5px; /* İç dolgu */
+  border-radius: 5px; /* Köşe yuvarlama */
+  display: none; /* Başlangıçta gizli */
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin: 0; /* Başarı mesajı için boşluk kaldırıldı */
+  background: #d4edda; /* Arka plan rengi */
+  padding: 5px; /* İç dolgu */
+  border-radius: 5px; /* Köşe yuvarlama */
+  display: none; /* Başlangıçta gizli */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0; /* Liste ile diğer elemanlar arasında boşluk bırak */
+}
+
+li {
+  width: calc(
+    90% - 20px
+  ); /* Input ile aynı genişlikte olacak şekilde ayarlandı */
+  box-sizing: border-box; /* Kenar ve dolgu dahil edilecek */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Yüksekliği artırıldı */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Elemanlar arasında boşluk */
+  background-color: #f8f9fa;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #f1f1f1; /* Hover efekti */
+}
+
+li.completed {
+  text-decoration: line-through; /* Üstü çizili */
+  color: gray; /* Rengi değiştir */
+}
+
+li.completed::before {
+  content: "✔ "; /* Tamamlandığında yanına onay işareti ekle */
+  color: green; /* Onay işareti rengi */
+}
+
+button.delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.delete:hover {
+  background: #c82333; /* Sil butonunda hover efekti */
+}
